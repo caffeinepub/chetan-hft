@@ -1,0 +1,29 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Platform Limitation Notice for MQL5 Expert Advisor Request",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "summary": "Display a clear message explaining that MQL5 Expert Advisors cannot be generated on this platform",
+      "acceptanceCriteria": [
+        "User sees a prominent notice explaining platform limitations",
+        "The notice clearly states this platform only supports Motoko backend and React/TypeScript frontend applications",
+        "The notice explains that MQL5 Expert Advisors for MetaTrader 5 cannot be generated here",
+        "User understands that the Internet Computer does not support MT5 trading integrations or MQL5 code execution"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Add a centered notice component explaining that this platform cannot generate MQL5 Expert Advisors or MetaTrader applications, and that it only supports Motoko backend and React/TypeScript frontend development"
+        },
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Add styling for the platform limitation notice to ensure it is clearly visible and properly formatted"
+        }
+      ]
+    }
+  ]
+}

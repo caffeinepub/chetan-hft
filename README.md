@@ -1,2 +1,3 @@
-# chetan-hft
-Exported from Caffeine project: CHETAN HFT
+## CHETAN HFT
+
+To run app build and run docker image: `docker build -t app . docker run -it --network host app`

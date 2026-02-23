@@ -1,0 +1,22 @@
+{
+  "kind": "build_request",
+  "title": "Create MQL5 Expert Advisor for XAUUSD with EMA-based buy strategy and basket trailing stop",
+  "projectName": "CHETAN HFT",
+  "priority": "normal",
+  "requirements": [],
+  "constraints": [
+    "This platform only supports Motoko backend and React/TypeScript frontend applications",
+    "MQL5 Expert Advisors for MetaTrader 5 cannot be generated on this platform",
+    "The Internet Computer does not support MT5 trading integrations or MQL5 code execution"
+  ],
+  "nonGoals": [
+    "Generating MQL5 code",
+    "Creating MetaTrader Expert Advisors",
+    "Building forex trading systems",
+    "Implementing trading algorithms for external platforms"
+  ],
+  "imageRequirements": {
+    "required": [],
+    "edits": []
+  }
+}

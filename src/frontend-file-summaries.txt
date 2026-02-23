@@ -1,0 +1,4 @@
+{
+  "frontend/src/App.tsx": "Main application component displaying a professional notice that explains this platform cannot generate MQL5 Expert Advisors and only supports Motoko backend and React/TypeScript frontend development on the Internet Computer.",
+  "frontend/src/index.css": "Global styles with OKLCH color system customized with a purple-blue primary color scheme for both light and dark modes, providing a professional and modern appearance."
+}

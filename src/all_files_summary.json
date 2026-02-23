@@ -1,0 +1,14 @@
+{
+  "backend/main.mo": "Empty Motoko actor serving as a placeholder backend canister for the Internet Computer.",
+  "feature_evidence.json": "Empty feature evidence report with no documented features.",
+  "frontend-file-summaries.txt": "JSON summary describing the frontend App.tsx notice component and index.css OKLCH color system for the platform limitation message.",
+  "frontend/index.css": "Tailwind CSS configuration with OKLCH color variables for light and dark themes, defining design tokens for the UI system.",
+  "frontend/index.html": "HTML entry point with root div and module script loading main.tsx for the 'CHETAN HFT' application.",
+  "frontend/src/App.tsx": "React component displaying a professional notice that this Internet Computer platform cannot generate MQL5 Expert Advisors and only supports Motoko backend and React/TypeScript frontend development.",
+  "frontend/src/hooks/useActor.ts": "React hook managing Internet Computer actor instances with authentication, creating anonymous or authenticated actors based on identity state and invalidating dependent queries on actor changes.",
+  "frontend/src/hooks/useInternetIdentity.ts": "React context provider and hook for Internet Identity authentication, managing login state, identity persistence, and AuthClient lifecycle with configurable options.",
+  "frontend/src/index.css": "Tailwind CSS base styles with OKLCH color system defining purple-blue themed design tokens for light and dark modes.",
+  "frontend/src/main.tsx": "React application entry point wrapping App with QueryClientProvider and InternetIdentityProvider for state management and authentication.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending theme with OKLCH color system, custom animations, container settings, and typography/animation plugins.",
+  "project_state.json": "Project state defining an MT5 Expert Advisor 'CHETAN HFT' with EMA-based buy strategy, grid orders, and basket trailing stop for XAUUSD M1, with five pending feature requests."
+}

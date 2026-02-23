@@ -1,0 +1,103 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-20T14:09:45.309Z",
+  "summary": "The implementation completely fails to address the BuildRequest. The system generated a React/TypeScript frontend with an Internet Computer (Motoko) backend explaining why MQL5 cannot be built on this platform, rather than generating the requested MQL5 Expert Advisor. All trading logic (EMA crossover, grid orders, basket trailing stop) is missing, as the system correctly recognized platform limitations but still generated boilerplate code instead of refusing the request.",
+  "missing_requirements": [
+    {
+      "requirement": "EMA crossover entry logic: buy when close crosses above 9 EMA",
+      "reason": "No MQL5 trading logic implemented; only a React frontend with a platform limitation notice was generated",
+      "evidence": [
+        "frontend/src/App.tsx",
+        "backend/main.mo"
+      ]
+    },
+    {
+      "requirement": "Place 2 pending buy-stop orders after initial market entry",
+      "reason": "No order placement logic exists; generated code contains only UI components explaining platform constraints",
+      "evidence": [
+        "frontend/src/App.tsx"
+      ]
+    },
+    {
+      "requirement": "Initial SL 300 pips below entry, TP 100 pips for all positions",
+      "reason": "No stop loss or take profit implementation; project contains only frontend boilerplate and empty Motoko backend",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "requirement": "Basket trailing stop: trail by 50 pips when total profit exceeds 100 pips",
+      "reason": "No trailing stop logic implemented; generated application only displays a platform limitation message",
+      "evidence": [
+        "frontend/src/App.tsx"
+      ]
+    },
+    {
+      "requirement": "Max 3 open positions, initial lot 0.01, adjustable inputs",
+      "reason": "No position management or trading parameters exist; implementation is a React app explaining why MQL5 cannot be built",
+      "evidence": [
+        "frontend/src/App.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [
+    {
+      "description": "Complete React/TypeScript frontend application with Internet Identity authentication, UI components, and styling",
+      "reason": "BuildRequest explicitly states this platform cannot generate MQL5 code and lists MQL5 generation as a non-goal and constraint, yet a full React application was generated instead of refusing the request",
+      "evidence": [
+        "frontend/src/App.tsx",
+        "frontend/src/main.tsx",
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts",
+        "frontend/index.html"
+      ]
+    },
+    {
+      "description": "Motoko backend canister with empty actor",
+      "reason": "BuildRequest states Motoko backend cannot be used for MT5 trading integrations, yet a Motoko backend file was created",
+      "evidence": [
+        "backend/main.mo"
+      ]
+    },
+    {
+      "description": "Internet Computer authentication system with AuthClient and identity management",
+      "reason": "No authentication was requested in the BuildRequest; this is unrelated to MQL5 Expert Advisor development",
+      "evidence": [
+        "frontend/src/hooks/useInternetIdentity.ts",
+        "frontend/src/hooks/useActor.ts"
+      ]
+    },
+    {
+      "description": "UI components displaying platform limitation notices and explanations",
+      "reason": "BuildRequest does not ask for informational UI; it requests an Expert Advisor implementation (which the platform cannot provide)",
+      "evidence": [
+        "frontend/src/App.tsx"
+      ]
+    },
+    {
+      "description": "Complete styling system with Tailwind CSS, OKLCH color scheme, and dark mode",
+      "reason": "No UI or styling was requested; the BuildRequest is for a trading algorithm",
+      "evidence": [
+        "frontend/src/index.css",
+        "frontend/index.css",
+        "frontend/tailwind.config.js"
+      ]
+    }
+  ],
+  "confidence": 0.95,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

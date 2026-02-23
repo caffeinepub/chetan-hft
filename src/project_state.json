@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "MT5 Expert Advisor 'CHETAN HFT' for XAUUSD M1 with EMA-based buy entries, grid buy-stop orders, and basket trailing stop",
+  "architectural_notes": [
+    "MQL5 Expert Advisor targeting XAUUSD symbol only",
+    "1-minute timeframe (M1) operation",
+    "Buy-only strategy using 9-period EMA for trend detection",
+    "Entry: market buy when close crosses above EMA, no open positions",
+    "Grid expansion: 2 pending buy-stop orders after initial entry",
+    "Risk management: 300-pip SL, 100-pip TP, basket trailing stop at 100-pip total profit",
+    "Max 3 concurrent positions",
+    "Configurable inputs: EMA period, lot size, grid distances, trailing values"
+  ],
+  "known_issues": [],
+  "isFixRequest": false,
+  "existing_features": [],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "EMA crossover entry logic: buy when close crosses above 9 EMA",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Place 2 pending buy-stop orders after initial market entry",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Initial SL 300 pips below entry, TP 100 pips for all positions",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Basket trailing stop: trail by 50 pips when total profit exceeds 100 pips",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Max 3 open positions, initial lot 0.01, adjustable inputs",
+      "reqIds": [],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "CHETAN HFT",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}
